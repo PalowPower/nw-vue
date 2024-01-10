@@ -1,30 +1,37 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
+  <div class="logocontainer">
+    <a href="https://vooras.com" target="_blank">
+      <img src="/v_logo_small_sq.png" class="logo vooras" alt="Vooras" />
+      <h1>Caption</h1>
     </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
+    <a>
+      <img src="/vite.svg" class="logo vite" alt="Vite">
+      <h1>Caption</h1>
     </a>
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
 <style scoped>
+.logocontainer {
+  justify-content: space-between;
+  display: inline-flex;
+  column-gap: 5em;
+}
 .logo {
-  height: 6em;
-  padding: 1.5em;
+  height: 10em;
+  padding: 2em;
   will-change: filter;
-  transition: filter 300ms;
+  transition: height 1s;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 3em #646cffaa);
+  height: 15em;
+  transition: height 0.7s;
 }
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+.logo.vooras {
+
 }
 </style>
